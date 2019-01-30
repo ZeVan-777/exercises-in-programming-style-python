@@ -10,6 +10,12 @@
 
 格诺的工作将**约束条件**作为解释表达风格的基础，而在软件系统关于“架构风格”（ architectural style ）方面的研究也有采用“**风格源于约束（禁止某事，某物必须存在，限制某事等）**”概念。
 
+## 悠久历史
+
+> “计算机系统犹如洋葱，利用年复一年的层层抽象使精确表达更加容易”
+
+- [往日的美好](./01-good-old-times/README.md)
+
 ## Links
 
 - [随书代码 GitHub](https://github.com/crista/exercises-in-programming-style)
