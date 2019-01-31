@@ -22,7 +22,7 @@ def filter_chars():
     stack.append(
         [stack.pop().sub(' ', stack.pop()[0]).lower()]
     )
-    
+
 # 3. 扫描单词
 def scan_words():
     # FIXME: split 为字符串高级实现
@@ -31,7 +31,7 @@ def scan_words():
 
 # 4. 移除停止词
 def remove_stop_words():
-    f = open('../stop_words.txt') 
+    f = open('../stop_words.txt')
     stack.append(f.read().split(','))
     f.close()
     # 增加单字母
@@ -63,7 +63,7 @@ def frequencies():
             stack.append(1)
         # 更新后词频重新入堆
         heap['word_freqs'][stack.pop()] = stack.pop()
-    
+
     stack.append(heap['word_freqs'])
     del heap['word_freqs']
 
@@ -86,4 +86,3 @@ while stack[-1] < 25 and len(stack) > 1:
     # 更新循环计数 i 1 +
     stack.append(heap['i']); stack.append(1)
     stack.append(stack.pop() + stack.pop())
-

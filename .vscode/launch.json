@@ -8,7 +8,7 @@
             "name": "Python: Current File (Integrated Terminal)",
             "type": "python",
             "request": "launch",
-            "cwd": "",            
+            "cwd": "",
             "program": "${file}",
             "args": ["../pride-and-prejudice.txt"],
             "console": "integratedTerminal"

@@ -4,7 +4,7 @@ import sys, os
 def touchopen(filename, *args, **kwargs):
     try:
         os.remove(filename)
-    except OSError:        
+    except OSError:
         pass
     # touch <filename>
     open(filename, "a").close()
@@ -35,7 +35,7 @@ f = open(sys.argv[1], 'r')
 # 二、处理数据文件
 while True:
     data[1] = [f.readline()]
-    # 文件末尾 —— （行处理）循环终止条件 
+    # 文件末尾 —— （行处理）循环终止条件
     if data[1] == ['']:
         break
     # 补全行末换行符
@@ -43,19 +43,19 @@ while True:
         data[1][0] = data[1][0] + '\n'
     # 重置行索引
     data[2] = None
-    data[3] = 0    
+    data[3] = 0
     # 行字符循环
     # FIXME: 尝试通过索引遍历数据行
     for c in data[1][0]:
         # 没有正在处理的单词，找单词开头
         if data[2] == None:
-            if c.isalnum():          
+            if c.isalnum():
                 data[2] = data[3]
         else:
             # 2.1 单词结尾 => 行数据中截取出待处理单词
             if not c.isalnum():
                 # 重置辅存记录查找的标志位
-                data[4] = False                
+                data[4] = False
                 data[5] = data[1][0][data[2]:data[3]].lower()
                 # 滤除停止词及短单词
                 if data[5] not in data[0] and len(data[5]) >= 2:
@@ -64,18 +64,18 @@ while True:
                         data[6] = str(word_freqs.readline().strip(), 'utf-8')
                         if data[6] == '':
                             break
-                        data[7] = int(data[6].split(',')[1])                        
+                        data[7] = int(data[6].split(',')[1])
                         data[6] = data[6].split(',')[0].strip()
                         # 当前处理单词有匹配词频记录，介绍查询
                         if data[5] == data[6]:
                             data[7] += 1
                             data[4] = True
                             break
-                    # 2.3 新增、更新辅存记录                            
+                    # 2.3 新增、更新辅存记录
                     if not data[4]:
                         word_freqs.seek(0, 1)
                         word_freqs.write(bytes("%20s,%04d\n" % (data[5], 1), 'utf-8'))
-                    else: 
+                    else:
                         word_freqs.seek(-26, 1)
                         word_freqs.write(bytes("%20s,%04d\n" % (data[5], data[7]), 'utf-8'))
                     # 移动文件读取指针到文件开头

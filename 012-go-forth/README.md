@@ -27,7 +27,7 @@ while stack[-1] < 25 and len(stack) > 1:
     heap['i'] = stack.pop()
     (w, f) = stack.pop()
     print(w, ' - ', f)
-	# 循环计数 i 1 +
+    # 循环计数 i 1 +
     stack.append(heap['i']); stack.append(1)
     stack.append(stack.pop() + stack.pop())
 ```
