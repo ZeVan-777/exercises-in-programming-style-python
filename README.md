@@ -15,7 +15,8 @@
 > “计算机系统犹如洋葱，利用年复一年的层层抽象使精确表达更加容易”
 
 - [往日的美好](./01-good-old-times/README.md)
-- [Forth 风格](./012-go-forth/README.md)
+- [Forth风格](./012-go-forth/README.md)
+- [食谱风格](./021-cookbook/README.md)
 
 ## Links
 
