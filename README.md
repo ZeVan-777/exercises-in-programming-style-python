@@ -21,6 +21,8 @@
 
 - [单片风格](./021-monolith/README.md)
 - [食谱风格](./022-cookbook/README.md)
+- [流水线风格](./023-pipeline/README.md)
+- [高尔夫风格](./024-code-golf/README.md)
 
 ## Links
 
