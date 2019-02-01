@@ -69,4 +69,3 @@ sort()
 
 for (w, f) in reversed(word_freqs[-25:]):
     print(w, ' - ', f)
-

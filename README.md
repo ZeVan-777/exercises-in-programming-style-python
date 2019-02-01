@@ -16,7 +16,7 @@
 
 - [往日的美好](./01-good-old-times/README.md)
 - [Forth风格](./012-go-forth/README.md)
-- [食谱风格](./021-cookbook/README.md)
+- [食谱风格](./022-cookbook/README.md)
 
 ## Links
 
