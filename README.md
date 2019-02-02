@@ -27,6 +27,7 @@
 ## 函数组合
 
 - [无线镜像风格](./031-infinite-mirror/README.md)，递归机制
+- [后续传递风格](./032-kick-forward/README.md)
 
 ## Links
 
