@@ -24,6 +24,10 @@
 - [流水线风格](./023-pipeline/README.md)
 - [高尔夫风格](./024-code-golf/README.md)
 
+## 函数组合
+
+- [无线镜像风格](./031-infinite-mirror/README.md)，递归机制
+
 ## Links
 
 - [随书代码 GitHub](https://github.com/crista/exercises-in-programming-style)
