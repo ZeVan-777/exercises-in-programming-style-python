@@ -28,6 +28,7 @@
 
 - [无线镜像风格](./031-infinite-mirror/README.md)，递归机制
 - [后续传递风格](./032-kick-forward/README.md)
+- [单子风格](./033-all-in-one/README.md)
 
 ## Links
 
