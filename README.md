@@ -28,7 +28,11 @@
 
 - [无线镜像风格](./031-infinite-mirror/README.md)，递归机制
 - [后续传递风格](./032-kick-forward/README.md)
-- [单子风格](./033-all-in-one/README.md)
+- [单子风格](./033-all-in-one/README.md)，封装数据，绑定操作
+
+## 对象与对象交互
+
+- [对象风格](./041-object-orient/README.md)
 
 ## Links
 
