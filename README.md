@@ -33,6 +33,7 @@
 ## 对象与对象交互
 
 - [对象风格](./041-object-orient/README.md)
+- [消息风格](./042-messaging/README.md)
 
 ## Links
 
