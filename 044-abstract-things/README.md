@@ -72,9 +72,9 @@ class AcceptTypes():
                     continue
                 if not isinstance(args[i + 1], globals()[self._args[i]]):
                     raise TypeError("Wrong Type")
-                
+
             f(*args)
-               
+
         return wrapped_f
 
 
