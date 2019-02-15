@@ -14,26 +14,34 @@
 
 > “计算机系统犹如洋葱，利用年复一年的层层抽象使精确表达更加容易”
 
-- [往日的美好](./011-good-old-times/README.md)
-- [Forth风格](./012-go-forth/README.md)
+现代系统的“内层”：
+
+- [往日的美好](./011-good-old-times/README.md)，主存容量相对数据有限，无标识符
+- [Forth风格](./012-go-forth/README.md)，所有操作针对栈中数据，堆通过名字存储后续操作所需数据
 
 ## 基本风格
 
-- [单片风格](./021-monolith/README.md)
-- [食谱风格](./022-cookbook/README.md)
-- [流水线风格](./023-pipeline/README.md)
-- [高尔夫风格](./024-code-golf/README.md)
+- [单片风格](./021-monolith/README.md)，*未抽象的大问题*，以具体、详细形式解决
+- [食谱风格](./022-cookbook/README.md)，过程抽象，操作均基于共享数据
+- [流水线风格](./023-pipeline/README.md)，较大问题分解为函数，组合纯函数解决大规模问题
+- [高尔夫风格](./024-code-golf/README.md)，利用语言强大抽象特性或库
 
 ## 函数组合
 
-- [无线镜像风格](./031-infinite-mirror/README.md)，递归机制
-- [后续传递风格](./032-kick-forward/README.md)
-- [单子风格](./033-all-in-one/README.md)，封装数据，绑定操作
+- [无线镜像风格](./031-infinite-mirror/README.md)，递归机制，数学归纳法建模
+- [后续传递风格](./032-kick-forward/README.md)，函数调用时均传入后续函数作为参数，供当前函数调用
+- [单子风格](./033-all-in-one/README.md)，封装数据，绑定操作，最后打开封装
 
 ## 对象与对象交互
 
-- [对象风格](./041-object-orient/README.md)
-- [消息风格](./042-messaging/README.md)
+对象与对象交互的不同机制：
+
+- [对象风格](./041-object-orient/README.md)，分解较大问题为问题域相关对象，封装数据，暴露过程
+- [消息风格](./042-messaging/README.md)，对象仅公开接收和发送消息的过程
+- [闭域风格](./043-closed-maps/README.md)，对象是键值映射，对象方法引用对象自身的键
+- [抽象对象风格](./044-abstract-things/README.md)，定义对象的抽象行为，再与实现行为的具体对象绑定，应用仅依赖行为
+- [好莱坞风格](./045-hollywood/README.md)，较大问题分解后实体不能直接被调用，需要注册到应用中统一调度
+- [公告板风格](./046-bulletin-board/README.md)，对象的所有交互基于基础结构的订阅、发布操作完成
 
 ## Links
 

@@ -16,23 +16,23 @@
 import abc
 
 class IDataStorage (metaclass=abc.ABCMeta):
-    
+
     @abc.abstractmethod
     def words(self):
         pass
 
 class IStopWordFilter (metaclass=abc.ABCMeta):
-    
+
     @abc.abstractmethod
     def is_stop_word(self, word):
         pass
 
 class IWordFrequencyCounter (metaclass=abc.ABCMeta):
-    
+
     @abc.abstractmethod
     def increase_count(self, word):
         pass
-    
+
     @abc.abstractmethod
     def sorted(self, word):
         pass
@@ -43,10 +43,10 @@ class IWordFrequencyCounter (metaclass=abc.ABCMeta):
 ``` python
 class DataStorageManager:
     _data = ''
-    
+
 class StopWordManager:
     _stop_words = []
-    
+
 class WordFrequencyManager:
     _word_freqs = {}
 
@@ -80,7 +80,7 @@ class AcceptTypes():
 
 class DataStorageManager(IDataStorage):
     _data = ''
-    
+
     @AcceptTypes('primitive', 'IStopWordFilter')
     def __init__(self, path_to_file, word_filter):
         # ...

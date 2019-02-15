@@ -39,8 +39,8 @@ Note over wfApp: 应用启动
 wfApp->filter: load事件
 Note over filter: 加载停止词
 wfApp->storage: load 事件
-wfApp->storage: start 事件
 Note over storage: 加载数据文本
+wfApp->storage: start 事件
 Note right of storage: 逐个处理单词
 storage->filter: word 事件
 Note over filter: is_stop_word?
