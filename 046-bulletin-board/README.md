@@ -33,24 +33,26 @@ class EventManager:
 
 实体的划分与其他对象风格一致：数据存储`DataStorage`、停止词过滤器`StopWordFilter`和词频统计器`WordFrequencyCounter`。此外，还增加`WordFrequencyApplication`类用于*开始并结束词频应用程序*。**类的交互订阅事件通知和发布自身事件实现**。事件流水线如下：
 
-```sequence
-eventManager->wfApp: run 事件
-Note over wfApp: 应用启动
-wfApp->filter: load事件
-Note over filter: 加载停止词
-wfApp->storage: load 事件
-Note over storage: 加载数据文本
-wfApp->storage: start 事件
-Note right of storage: 逐个处理单词
-storage->filter: word 事件
-Note over filter: is_stop_word?
-filter-->counter: valid_word 事件
-Note over counter: 增加词频数据
-Note over storage: 数据文本末尾
-storage->wfApp: eof 事件
-Note over wfApp: 应用停止
-wfApp->counter: print 事件
-Note over counter: 输出词频统计数据
+```mermaid
+sequenceDiagram
+    eventManager->>wfApp: run 事件
+    Note over wfApp: 应用启动
+    wfApp->>filter: load事件
+    Note over filter: 加载停止词
+    wfApp->>storage: load 事件
+    Note over storage: 加载数据文本
+    wfApp->>storage: start 事件
+    loop 逐个处理单词
+        storage->>filter: word 事件
+        Note over filter: is_stop_word?
+        filter-->>counter: valid_word 事件
+        Note over counter: 增加词频数据
+    end
+    Note over storage: 数据文本末尾
+    storage->>wfApp: eof 事件
+    Note over wfApp: 应用停止
+    wfApp->>counter: print 事件
+    Note over counter: 输出词频统计数据
 ```
 
 公告板风格常和异步组件共同使用，但并非必须，如示例程序中实体同步处理完订阅事件才返回。处理事件的基础结构可能更加复杂，如几个组件相互作用实现**事件分发**；事件结构也可能更加复杂，以支持更精确的事件过滤，如组件**订阅不同事件类型及其内容的组合**。
